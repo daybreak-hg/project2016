@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>照会ページ</title>
+</head>
+<body>
+
+	<table border="2">
+		<thead>
+			<tr>
+				<th>レコードNo</th>
+				<th>ユーザー名</th>
+				<th>更新日時</th>
+			</tr>
+		</thead>
+		<tr th:each="output : ${outputs}">
+			<td th:text="${output.recNo}"></td>
+			<td th:text="${output.userName}"></td>
+			<td th:text="${#dates.format(output.updateDate,'yyyy/MM/dd HH:MM:SS')}"></td>
+		</tr>
+	</table>
+
+</body>
+</html>
